@@ -1,0 +1,47 @@
+     import { GlobalStyles } from './style/global';
+    import { Trans, useTranslation } from 'react-i18next';
+    //import { withTranslation} from 'react-i18next';
+    //import { useTranslation } from 'react-i18next';
+
+      //const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const person = { name: 'Henry'};
+  const { name} = person;
+
+
+
+      {/* <h1>
+        <Trans i18nKey="react" className="App-title">
+        Welcome to React
+        </Trans>
+        </h1>
+    
+      <h2><Trans i18nKey="titre">
+        My title change
+        </Trans></h2>
+      <h3><Trans i18nKey="upon">
+        Once upon a time
+        </Trans></h3> */}
+ 
+{/*       
+    {t('home.hello')}
+    <br />
+      <Trans i18nKey="userMessagesUnread">
+      Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have unread message.
+    </Trans>
+    <br /><br />
+
+      <Trans i18nKey='welcome.intro'>
+                To get started, edit <code>src/App.js</code>.
+      </Trans>
+      <br />  <br />
+ 
+      {/* <Trans t={t}>Hello World</Trans>; */}
+
+    
+        {/* <div>
+                <Button />
+                <button onClick={() => i18n.changeLanguage('de')}>fr</button>
+                <button onClick={() => i18n.changeLanguage('en')}>en</button>
+            </div> */}
+//export default withTranslation('common')(App);            
