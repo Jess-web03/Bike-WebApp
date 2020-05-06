@@ -52,6 +52,7 @@ export const GlobalStyles = createGlobalStyle`
   display: inline-block;
   font-size: 16px;
   margin: 4px 0px;
+  outline:none;
   cursor: pointer;
     }
     img{
@@ -179,6 +180,10 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 32px;
       margin: 4px 2px;
       cursor: pointer;
+      outline:none;
+    }
+    .btn-rounded:hover{
+      background-color: rgb(248, 153, 185);
     }
     .box{
       display:flex;

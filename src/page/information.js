@@ -1,47 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Footer from '../component/Footer';
-
 import { Trans } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
 import Slide from 'react-reveal/Slide';
-import Bounce from 'react-reveal/Bounce';
+import ContainerQuiz from '../quiz/ContainerQuiz';
+import IntroQuiz from './IntroQuiz';
 
-//import Paper from '@material-ui/core/Paper';
-//import Grid from '@material-ui/core/Grid';
-//import Hidden from '@material-ui/core/Hidden';
-
-//import Button from '../style/Button';
-import Question from '../image/question-mark.png';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    },
-  }));
-  
 const Information = () => {
-    const classes = useStyles();
+  const [quizVisible, setQuizVisible] = useState(false);
+  const [introQuizVisible, setIntroQuizVisible] = useState(true);
+  const [btnVisible, setBtnVisible] = useState(true);
+  const showQuiz = () => {
+    setQuizVisible(true);
+    setIntroQuizVisible(false);
+    setBtnVisible(false);
+  }
+    
     return(
-        <div className={classes.root}>
+        <div>
           <Slide top>
             <h2>Quiz</h2>
             </Slide>
-
-            <Bounce bottom>
-            <img id="quizImg" src={Question} alt="question" />
-            </Bounce>
-            <p><Trans i18nKey="joue" /></p>
-            <p><Trans i18nKey="test" /></p>
-            <button className="btn-rounded"><Trans i18nKey="start" /></button>
+    
+            {introQuizVisible ? <IntroQuiz /> : null}
+            {quizVisible ? <ContainerQuiz /> : null}
+            {btnVisible ?
+            <button className="btn-rounded" onClick={showQuiz}><Trans i18nKey="start" /></button>
+            : null}
+            
         <div id="green"></div>
         <div id="orange"></div>
-       
-
       <Footer />
     </div>
    

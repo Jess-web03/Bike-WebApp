@@ -1,3 +1,50 @@
+.btnMainQuiz{
+  background-color: #DB7093;
+  transition-duration:0.8s ;
+  border: none;
+  outline: none;
+  border-radius:50px;
+  color: white;
+  padding: 25px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btnMainQuiz:hover{
+  background-color: rgb(248, 153, 185);
+  border: none;
+  border-radius:50px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btnQuizOption{
+  background-color:rgb(48, 133, 32);
+  padding:20px;
+  border-radius: 50px;;
+  font-weight: bold;
+  font-size: 20px;
+  transition-duration:0.8s ;
+  color:white;
+  outline:none;
+  cursor: pointer;
+}
+.btnQuizOption:hover{
+  background-color: rgb(110, 245, 86);
+  color:white;
+}
+.btnQuizOption:focus{
+  background-color: rgb(110, 245, 86);
+  color:white;
+}
 
 .App {
   text-align: center;
@@ -34,6 +81,13 @@ li>a{
   width:60px;
   height: auto;
 }
+.modal{
+  background-color: rgba(0,0,0,0.5);
+  position:relative;
+  margin: 0 auto;
+  width:400px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

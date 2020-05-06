@@ -30,13 +30,36 @@ import BikeType2 from '../image/bicycleSki.png';
 import BikeType3 from '../image/bicycleRacer.png';
 import BikeType4 from '../image/bikeChaise.png';
 
-const Mecano = () => {
+
+const Mecano = (event) => {
+  const bikeList = [
+    { id: 1, title: 'Red', name: 'Phoebe' },
+    { id: 2, title: 'Green', name: 'Rachel' },
+    { id: 3, title: 'Yellow', name: 'Ross' },
+    { id: 4, title: 'Black', name: 'Zoss' },
+  ];
+    
     const [modalVisible, setModalVisible] = useState(false);
+    const [items, setItems] = useState([]);
     const closeModal = () => setModalVisible(false);
-    const information = () => {
+    const information = (event) => {
+     // let z = document.getElementById('test').alt
+      //console.log(z);
+
+      var w = document.querySelectorAll(".image-bike").length;
+      console.log(w);
+    
+      setItems([bikeList,{
+        id:items.length,
+        title:bikeList[1].title,
+        name:bikeList[1].name,
+        value:Math.floor(Math.random()*10)+1
+      }])
         setModalVisible(true);
+      
     }
     return(
+     
         <div>
              <Slide top>
             <h2>Mecano</h2>
@@ -45,30 +68,31 @@ const Mecano = () => {
             <h3><Trans i18nKey='type' /></h3>
             </Slide>
             <h4>Clic to discover</h4>
-            
-     <div className="modal" style={{display: modalVisible ? "block" : "none", backgroundColor: "rgba(0,0,0,0.5)"}}>
+
+     <div className="modal" style={{display: modalVisible ? "block" : "none"}}>
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">Modal title</h5>
-              <button onClick={closeModal} type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    <h5 className="modal-title">Bike title
+    {items.map(item => <h5 key={item.id}>{item.title}</h5>)}
+    </h5>
             </div>
             <div className="modal-body">
-              <p>Modal body text goes here.</p>
+    <p>This is {
+   items.map(item => <span key={item.id}>{item.value}{item.name}{item.title}</span>)
+  }</p>
             </div>
             <div className="modal-footer">
-              <button onClick={closeModal} type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button onClick={closeModal} type="button" className="btn btn-secondary" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
             </div>
           </div>
         </div>
       </div>
     
-            <img src={BikeType1} alt="un vélo rouge" onClick={information} />
-            <img src={BikeType2} alt="un vtt" onClick={information} />
-            <img src={BikeType3} alt="un vélo de course" onClick={information} />
-            <img src={BikeType4} alt="un vélo couché" onClick={information} />
+            <img className="image-bike" src={BikeType1} alt="un vélo rouge" id="test" onClick={information} />
+            <img className="image-bike" src={BikeType2} alt="un vtt" onClick={information} />
+            <img className="image-bike" src={BikeType3} alt="un vélo de course" onClick={information} />
+            <img className="image-bike" src={BikeType4} alt="un vélo couché" onClick={information} />
 
         <div className="bigContainer">
             <div className="leftPart">
