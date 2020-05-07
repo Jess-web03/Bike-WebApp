@@ -4,6 +4,9 @@ import Progress from '../quiz/Progress';
 import QuestionQuiz from '../quiz/Question';
 import Answers from '../quiz/Answers';
 import Z from '../image/suricate.png';
+import BadgeF from '../image/badgeQueen.png';
+import BadgeM from '../image/badgeKing.png';
+
 
 
 const ContainerQuiz = () => {
@@ -16,124 +19,127 @@ const ContainerQuiz = () => {
     const questions = [
         {
           questionId: 1,  
-          question:'My name is ?',
-          answer_a:'Jessica',
-          answer_b:'Vanessa',
-          answer_c:'Melissa',
+          question:<Trans i18nKey='betweenTire' />,
+          answer_a:<Trans i18nKey='innerTube' />,
+          answer_b:<Trans i18nKey='pedal' />,
+          answer_c:<Trans i18nKey='saddle' />,
           correct:'A',
              
         },
         {
             questionId: 2,
-            question:'My second name is ?',
-            answer_a:'Louisa',
-            answer_b:'Antonella',
-            answer_c:'Sofia',
+            question:<Trans i18nKey='rideTrack' />,
+            answer_a:<Trans i18nKey='doWant' />,
+            answer_b:<Trans i18nKey='no' />,
+            answer_c:<Trans i18nKey='yes' />,
             correct:'C',
              
         },
         {
             questionId: 3,
-            question:'My favourite color is ?',
-            answer_a:'Green',
-            answer_b:'Purple',
-            answer_c:'Yellow',
+            question:<Trans i18nKey='intruder' />,
+            answer_a:<Trans i18nKey='handlebars' />,
+            answer_b:<Trans i18nKey='motor' />,
+            answer_c:<Trans i18nKey='frame' />,
             correct:'B',
              
         },
         {
-            question:'My favourite fruit ?',
-            answer_a:'Cherry',
-            answer_b:'Apple',
-            answer_c:'Mango',
+            question:<Trans i18nKey='wearing' />,
+            answer_a:<Trans i18nKey='decorate' />,
+            answer_b:<Trans i18nKey='obligatory' />,
+            answer_c:<Trans i18nKey='advised' />,
             correct:'C',
             questionId: 4
         },
         {
-            question:'My favourite animal ?',
-            answer_a:'Tiger',
-            answer_b:'Cat',
-            answer_c:'Lion',
+            question:<Trans i18nKey='seeThis' />,
+            imgSrc:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Belgian_road_sign_F9.svg/594px-Belgian_road_sign_F9.svg.png",
+            answer_a:<Trans i18nKey='notMe' />,
+            answer_b:<Trans i18nKey='crazyGo' />,
+            answer_c:<Trans i18nKey='avoid' />,
             correct:'A', 
             questionId: 5
         },
         {
-            question:'My month birthday is ?',
-            answer_a:'October',
-            answer_b:'September',
-            answer_c:'November',
+            question:<Trans i18nKey='changeDirection' />,
+            answer_a:<Trans i18nKey='handSignal' />,
+            answer_b:<Trans i18nKey='clown' />,
+            answer_c:<Trans i18nKey='balance' />,
             correct:'A' ,
             questionId: 6
         },
         {
-            question:'My favourite series ?',
-            answer_a:'Orange is the new black',
-            answer_b:'The Good place',
-            answer_c:'Friends',
+            question:<Trans i18nKey='possible' />,
+            answer_a:<Trans i18nKey='rideTwo' />,
+            answer_b:<Trans i18nKey='rideOne' />,
+            answer_c:<Trans i18nKey='rideMany' />,
             correct:'A',
             questionId: 7
         },
         {
-            question:'I usually drink ?',
-            answer_a:'Water',
-            answer_b:'Vodka',
-            answer_c:'Bier',
+            question:<Trans i18nKey='orderAllTime' />,
+            answer_a:<Trans i18nKey='saddle' />,
+            answer_b:<Trans i18nKey='reflectors' />,
+            answer_c:<Trans i18nKey='brakes' />,
             correct:'A' ,
             questionId: 8
         },
         {
-            question:'The name of my first cat is ?',
-            answer_a:'Cramique',
-            answer_b:'Madara',
-            answer_c:'Lady',
-            correct:'A' ,
+            question:<Trans i18nKey='roadSign' />,
+            imgSrc:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/France_road_sign_M12b.svg/273px-France_road_sign_M12b.svg.png",
+            answer_a:<Trans i18nKey='straight' />,
+            answer_b:<Trans i18nKey='priority' />,
+            answer_c:<Trans i18nKey='sawAlready' />,
+            correct:'B' ,
             questionId: 9  
         },
         {
-            question:'The name of my boyfriend is ?',
-            answer_a:'Andy',
-            answer_b:'Zachary',
-            answer_c:'Luis',
+            question:<Trans i18nKey='oldSidewalk' />,
+            answer_a:<Trans i18nKey='year9' />,
+            answer_b:<Trans i18nKey='year10' />,
+            answer_c:<Trans i18nKey='year12' />,
             correct:'B' ,
             questionId: 10 
         },
         {
-            question:'I have never been to ?',
-            answer_a:'Perou',
-            answer_b:'Swiss',
-            answer_c:'Danemark',
+            question:<Trans i18nKey='driveProhib' />,
+            answer_a:<Trans i18nKey='notPossible' />,
+            answer_b:<Trans i18nKey='goWrong' />,
+            answer_c:<Trans i18nKey='whitePanel' />,
             correct:'C' ,
             questionId: 11  
         },
         {
-            question:"I don't like ?",
-            answer_a:'Cooking',
-            answer_b:'Cleaning my room',
-            answer_c:"Cleaning the cat's toilet",
+            question:"Je veux passer au rouge ?",
+            answer_a:"J'attends comme les voiture en tant que bon citoyen",
+            answer_b:"Je me lance, pourquoi je m'arrêterai dans ma lancée ?",
+            answer_c:"Je me lance si il y a un petit panneau triangulaire indicatif ",
             correct:"C" ,
             questionId: 12  
         },
         {
-            question:"I dance on ?",
-            answer_a:'Hip Hop',
-            answer_b:'Zumba',
-            answer_c:'Reggae',
+            question:<Trans i18nKey='crankset' />,
+            answer_a:<Trans i18nKey='crank' />,
+            answer_b:<Trans i18nKey='rearWheel' />,
+            answer_c:<Trans i18nKey='frontWheel' />,
             correct:'B' ,
             questionId: 13  
         },
         {
-            question:"My default ?",
-            answer_a:'Stubborn',
-            answer_b:'Bad player',
-            answer_c:'Shy',
+            question:"Un sas cyclable devant le feu tricolore est réservé uniquement pour ?",
+            answer_a:<Trans i18nKey='bikeOnly' />,
+            answer_b:<Trans i18nKey='typeTwo' />,
+            answer_c:<Trans i18nKey='placeKnow' />,
             correct:"A" ,
             questionId: 14  
         },
         {
-            question:"My city ?",
-            answer_a:'Lima',
-            answer_b:'Caracas',
-            answer_c:'Bogota',
+            question:<Trans i18nKey='panel' />,
+            imgSrc: "https://cdn.pixabay.com/photo/2013/07/13/13/16/bicycle-lane-160714_960_720.png",
+            answer_a:<Trans i18nKey='canRide' />,
+            answer_b:<Trans i18nKey='bikeSight' />,
+            answer_c:<Trans i18nKey='seeNothing' />,
             correct:"B" ,
             questionId: 15 
         }
@@ -195,6 +201,9 @@ const ContainerQuiz = () => {
         return (
         <div>
             <h3>Result</h3>
+            <p>Choose your badge</p>
+            <img className="img-badge" src={BadgeF} alt='badge Queen' />
+            <img className="img-badge" src={BadgeM} alt='badge King' />
             <img src={Z} alt='z' />
             {renderResultData()}
             <button className="btnMainQuiz" onClick={restart}>Restart</button>
@@ -205,6 +214,7 @@ const ContainerQuiz = () => {
         <div>
             <Progress total={questions.length} current={currentQuestion + 1} />
             <QuestionQuiz question={question.question} />
+            <img src={question.imgSrc} alt="" />
             {renderError()}
             <Answers question={question}
                      currentAnswer={currentAnswer}
