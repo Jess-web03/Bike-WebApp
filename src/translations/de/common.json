@@ -67,11 +67,17 @@
     "goWrong":"Je ne vais jamais dans les sens interdits",
     "whitePanel":"Est possible si il y a un panneau additionnel blanc",
 
+    "redLight":"Je veux passer au rouge ?",
+    "citizenWait":"J'attends comme les voiture en tant que bon citoyen",
+    "startTrack":"Je me lance, pourquoi je m'arrêterai dans ma lancée ?",
+    "startTriangular":"Je me lance si il y a un petit panneau triangulaire indicatif",
+
     "crankset":"Par où est relié le pédalier ?",
     "crank":"Le péda quoi ?",
     "rearWheel":"La roue arrière",
     "frontWheel":"La roue avant",
 
+    "advanceLine":"Un sas cyclable devant le feu tricolore est réservé uniquement pour ?",
     "bikeOnly":"Les vélos uniquement",
     "typeTwo":"Tout type de deux roues",
     "placeKnow":"Ils ont droit à leur place ? Je ne savais pas",
@@ -80,9 +86,12 @@
     "canRide":"Je peux rouler",
     "bikeSight":"Piste cyclable en vue",
     "seeNothing":"Je ne vois rien",
+    "result":"Resultat",
+    "badge":"Choisis ton badge",
 
     "safety": "Sécurité",
     "type":"Différents types",
+    "clicDiscover":"Clique pour découvrir",
     "practice": "Bonne pratiques",
     "essential": "Essentiel",
     "also": "Egalement",

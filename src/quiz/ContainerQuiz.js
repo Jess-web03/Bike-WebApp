@@ -3,9 +3,11 @@ import { Trans } from 'react-i18next';
 import Progress from '../quiz/Progress';
 import QuestionQuiz from '../quiz/Question';
 import Answers from '../quiz/Answers';
-import Z from '../image/suricate.png';
+
 import BadgeF from '../image/badgeQueen.png';
 import BadgeM from '../image/badgeKing.png';
+import YesCorrect from '../image/yes.png';
+import NotFailed from '../image/not.png';
 
 
 
@@ -35,15 +37,15 @@ const ContainerQuiz = () => {
             correct:'C',
              
         },
-        {
-            questionId: 3,
-            question:<Trans i18nKey='intruder' />,
-            answer_a:<Trans i18nKey='handlebars' />,
-            answer_b:<Trans i18nKey='motor' />,
-            answer_c:<Trans i18nKey='frame' />,
-            correct:'B',
+        // {
+        //     questionId: 3,
+        //     question:<Trans i18nKey='intruder' />,
+        //     answer_a:<Trans i18nKey='handlebars' />,
+        //     answer_b:<Trans i18nKey='motor' />,
+        //     answer_c:<Trans i18nKey='frame' />,
+        //     correct:'B',
              
-        },
+        // },
         {
             question:<Trans i18nKey='wearing' />,
             answer_a:<Trans i18nKey='decorate' />,
@@ -111,10 +113,10 @@ const ContainerQuiz = () => {
             questionId: 11  
         },
         {
-            question:"Je veux passer au rouge ?",
-            answer_a:"J'attends comme les voiture en tant que bon citoyen",
-            answer_b:"Je me lance, pourquoi je m'arrêterai dans ma lancée ?",
-            answer_c:"Je me lance si il y a un petit panneau triangulaire indicatif ",
+            question:<Trans i18nKey='redLight' />,
+            answer_a:<Trans i18nKey='citizenWait' />,
+            answer_b:<Trans i18nKey='startTrack' />,
+            answer_c:<Trans i18nKey='startTriangular' />,
             correct:"C" ,
             questionId: 12  
         },
@@ -127,7 +129,7 @@ const ContainerQuiz = () => {
             questionId: 13  
         },
         {
-            question:"Un sas cyclable devant le feu tricolore est réservé uniquement pour ?",
+            question:<Trans i18nKey='advanceLine' />,
             answer_a:<Trans i18nKey='bikeOnly' />,
             answer_b:<Trans i18nKey='typeTwo' />,
             answer_c:<Trans i18nKey='placeKnow' />,
@@ -159,9 +161,9 @@ const ContainerQuiz = () => {
 
     const renderResultPoint = (question, answer) => {
         if(question.correct === answer.answer){
-            return <span>Correct</span>;
+            return <img className="resultImg" src={YesCorrect} alt="correct" />;
         }
-        return <span>Failed</span>;
+        return <img className="resultImg" src={NotFailed} alt="failed" />;
     }
     const renderResultData = () =>{
         return answers.map( answer =>{
@@ -175,12 +177,12 @@ const ContainerQuiz = () => {
         }
         );
     }
-    const restart = () => {
-        setAnswers ([]);
-        setCurrentAnswer('');
-        setCurrentQuestion(0);
-        setShowResult(false);
-    }
+    // const restart = () => {
+    //     setAnswers ([]);
+    //     setCurrentAnswer('');
+    //     setCurrentQuestion(0);
+    //     setShowResult(false);
+    // }
     const next = () =>{
         const answer = {questionId : question.questionId, answer : currentAnswer};
 
@@ -200,13 +202,14 @@ const ContainerQuiz = () => {
     if(showResult){
         return (
         <div>
-            <h3>Result</h3>
-            <p>Choose your badge</p>
+            <h3><Trans i18nKey="result" /></h3>
+            <p><Trans i18nKey="badge" /></p>
             <img className="img-badge" src={BadgeF} alt='badge Queen' />
             <img className="img-badge" src={BadgeM} alt='badge King' />
-            <img src={Z} alt='z' />
+           
             {renderResultData()}
-            <button className="btnMainQuiz" onClick={restart}>Restart</button>
+            {/** <button className="btnMainQuiz" onClick={restart}>Restart</button>*/}
+            
         </div>
         )
     }else{

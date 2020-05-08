@@ -24,6 +24,9 @@ export const GlobalStyles = createGlobalStyle`
     h3{
       font-size:40px;
     }
+    p.questionQuiz{
+      font-size:32px;
+    }
     .btn-rounded{
       background-color: #DB7093;
       border: none;
@@ -164,6 +167,9 @@ export const GlobalStyles = createGlobalStyle`
     }
     h2{
       font-size:150px;
+    }
+    p.questionQuiz{
+      font-size:70px;
     }
     #more{
       font-size:50px;

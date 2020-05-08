@@ -67,7 +67,7 @@ const Mecano = (event) => {
             <Slide left>
             <h3><Trans i18nKey='type' /></h3>
             </Slide>
-            <h4>Clic to discover</h4>
+            <h4><Trans i18nKey='clicDiscover' /></h4>
 
      <div className="modal" style={{display: modalVisible ? "block" : "none"}}>
         <div className="modal-dialog" role="document">

@@ -70,11 +70,17 @@
     "goWrong":"I never go in the prohibited directions",
     "whitePanel":"Is possible if there is an additional white panel",
 
+    "redLight":"I want to go to red traffic lights ?",
+    "citizenWait":"As a good citizen I'm waiting for like cars",
+    "startTrack":"I'm starting, why will I stop in my tracks ?",
+    "startTriangular":"I start if there is a small triangular indicative panel",
+
     "crankset":"Where is the crankset connected ?",
     "crank":"Crankset ?",
     "rearWheel":"Rear wheel",
     "frontWheel":"Front wheel",
 
+    "advanceLine":"An advanced stop line in front of traffic light is reserved only for ?",
     "bikeOnly":"Bikes only",
     "typeTwo":"All types of two wheels",
     "placeKnow":"Their place? I did not know",
@@ -83,9 +89,12 @@
     "canRide":"I can ride",
     "bikeSight":"Bike path in sight",
     "seeNothing":"I see nothing",
+    "result":"Result",
+    "badge":"Choose your badge",
 
     "safety": "Safety",
     "type":"Different types",
+    "clicDiscover":"Clic to discover",
     "practice": "Good practices",
     "essential": "Essential",
     "also": "Also",
