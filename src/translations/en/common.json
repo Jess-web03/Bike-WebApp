@@ -91,6 +91,7 @@
     "seeNothing":"I see nothing",
     "result":"Result",
     "badge":"Choose your badge",
+    "question":"Question",
 
     "safety": "Safety",
     "type":"Different types",
@@ -114,6 +115,9 @@
     "parking":"Bicycle parking",
     "together":"Together is Better",
     "join":"Join Us",
+
+    "merci":"Thank you for your message",
+
     "userMessagesUnread": "Hello {{name}}.",
     "userMessagesUnread_plural": "Hello {{name}}.",
     "welcomeUser": "Welcome User",

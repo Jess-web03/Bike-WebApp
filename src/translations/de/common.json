@@ -88,6 +88,7 @@
     "seeNothing":"Je ne vois rien",
     "result":"Resultat",
     "badge":"Choisis ton badge",
+    "question":"Question",
 
     "safety": "Sécurité",
     "type":"Différents types",
@@ -111,6 +112,9 @@
     "parking":"Stationnement",
     "together":"Ensemble c'est Mieux",
     "join":"Rejoins Nous",
+
+    "merci":"Merci pour ton message",
+
     "userMessagesUnread": "Bonjour {{name}}.",
     "userMessagesUnread_plural": "Bonjour {{name}}.",
     "welcomeUser": "Bienvenue Utilisateur",

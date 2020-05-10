@@ -18,7 +18,7 @@ import Gant from '../image/gant.svg';
 import Pompe from '../image/pompeColor.svg';
 
 import Go from '../image/GOok.svg';
-import Stop from '../image/STOPok.svg';
+// import Stop from '../image/STOPok.svg';
 import BikeRoute from '../image/bikeRoute.png';
 
 import ParentKid from '../image/ParentKid4.svg';
@@ -166,7 +166,8 @@ const Mecano = (event) => {
           
           <p className="motto join"><Trans i18nKey='join' /></p>
           </Zoom>
-            <img src={Stop} alt="panneau stop" />
+          {/* <img src={Stop} alt="panneau stop" />*/ }
+            
         <Footer />
         </div>
     )

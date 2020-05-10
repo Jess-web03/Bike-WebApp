@@ -81,7 +81,7 @@ export const GlobalStyles = createGlobalStyle`
       width:50px;
       height:auto;
       position:relative;
-      bottom:290px;
+      bottom:526px;
       left:60px;
     }
     .bold{
@@ -170,6 +170,9 @@ export const GlobalStyles = createGlobalStyle`
     }
     p.questionQuiz{
       font-size:70px;
+    }
+    form{
+      width:300px;
     }
     #more{
       font-size:50px;
@@ -287,6 +290,9 @@ export const GlobalStyles = createGlobalStyle`
     body{
       background:${({ theme }) => theme.body} ;
       color:${({ theme }) => theme.text} ;
+    }
+    form{
+      width:400px;
     }
     img{
       width:500px;
