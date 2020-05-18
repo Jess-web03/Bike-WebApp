@@ -14,7 +14,6 @@ import Lunette from '../image/lunetteColor.svg';
 import Sonette from '../image/sonette.svg';
 import Jacket from '../image/jacketYellow.png';
 import Gant from '../image/gant.svg';
-
 import Pompe from '../image/pompeColor.svg';
 
 import Go from '../image/GOok.svg';
@@ -29,32 +28,41 @@ import BikeType1 from '../image/bicycleRed.png';
 import BikeType2 from '../image/bicycleSki.png';
 import BikeType3 from '../image/bicycleRacer.png';
 import BikeType4 from '../image/bikeChaise.png';
+import ArrowPink from '../image/arrowPink.png';
 
 
-const Mecano = (event) => {
-  const bikeList = [
-    { id: 1, title: 'Red', name: 'Phoebe' },
-    { id: 2, title: 'Green', name: 'Rachel' },
-    { id: 3, title: 'Yellow', name: 'Ross' },
-    { id: 4, title: 'Black', name: 'Zoss' },
+const Mecano = (e) => {
+    
+  const bikes = [
+    { id: 1, target: 'bike1', title: <Trans i18nKey='redBike' /> , name: 'Phoebe', description: <Trans i18nKey='easy' /> },
+    { id: 2, target: 'bike2', title: <Trans i18nKey='greenBike' />, name: 'Rachel', description:<Trans i18nKey='vtt' />  },
+    { id: 3, target: 'bike3', title: <Trans i18nKey='yellowBike' />, name: 'Ross', description: <Trans i18nKey='speed' /> },
+    { id: 4, target: 'bike4', title: <Trans i18nKey='blackBike' />, name: 'Zoss', description: <Trans i18nKey='horizontal' />  },
   ];
-    
-    const [modalVisible, setModalVisible] = useState(false);
-    const [items, setItems] = useState([]);
-    const closeModal = () => setModalVisible(false);
-    const information = (event) => {
-     // let z = document.getElementById('test').alt
-      //console.log(z);
 
-      var w = document.querySelectorAll(".image-bike").length;
-      console.log(w);
+    const [modalVisible, setModalVisible] = useState(false);
+    const [currentAnswer, setCurrentAnswer] = useState('');
+    const closeModal = () => setModalVisible(false);
     
-      setItems([bikeList,{
-        id:items.length,
-        title:bikeList[1].title,
-        name:bikeList[1].name,
-        value:Math.floor(Math.random()*10)+1
-      }])
+  const renderResultData = (e) =>{
+    return bikes.map( bike =>{
+        const bikeNew = bikes.find(bike => bike.target === currentAnswer);
+        if(bike.target === currentAnswer){
+          return(
+                <div key={bike.id} className="center white">
+                  {bike.title}
+                <p className="phrase-description">{bike.description}</p>  
+            </div>
+       
+          )
+        }  
+   
+    }
+    );
+}
+
+    const information = (e) => {
+       setCurrentAnswer(e.target.id);
         setModalVisible(true);
       
     }
@@ -67,32 +75,33 @@ const Mecano = (event) => {
             <Slide left>
             <h3><Trans i18nKey='type' /></h3>
             </Slide>
+       
+        
+            <img id="arrowLeft" className="arrowPink" src={ArrowPink} alt="fleche" />
+    
+            <img id="arrowRight" className="arrowPink" src={ArrowPink} alt="fleche" />
+    
+        
             <h4><Trans i18nKey='clicDiscover' /></h4>
 
      <div className="modal" style={{display: modalVisible ? "block" : "none"}}>
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-    <h5 className="modal-title">Bike title
-    {items.map(item => <h5 key={item.id}>{item.title}</h5>)}
-    </h5>
-            </div>
-            <div className="modal-body">
-    <p>This is {
-   items.map(item => <span key={item.id}>{item.value}{item.name}{item.title}</span>)
-  }</p>
+
+  {renderResultData()}
             </div>
             <div className="modal-footer">
-              <button onClick={closeModal} type="button" className="btn btn-secondary" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+              <button onClick={closeModal} type="button" className=" btn-rounded-small" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
             </div>
           </div>
         </div>
       </div>
     
-            <img className="image-bike" src={BikeType1} alt="un vélo rouge" id="test" onClick={information} />
-            <img className="image-bike" src={BikeType2} alt="un vtt" onClick={information} />
-            <img className="image-bike" src={BikeType3} alt="un vélo de course" onClick={information} />
-            <img className="image-bike" src={BikeType4} alt="un vélo couché" onClick={information} />
+            <img className="image-bike" src={BikeType1} alt="un vélo rouge" id="bike1" onClick={(e) => information(e)}   />
+            <img className="image-bike" src={BikeType2} alt="un vtt" id="bike2" onClick={(e) => information(e)}   />
+            <img className="image-bike" src={BikeType3} alt="un vélo de course" id="bike3" onClick={(e) => information(e)}  />
+            <img className="image-bike" src={BikeType4} alt="un vélo couché" id="bike4" onClick={(e) => information(e)}  />
 
         <div className="bigContainer">
             <div className="leftPart">
@@ -152,7 +161,7 @@ const Mecano = (event) => {
 
 
           
-          <div class="box">
+          <div className="box">
             <div>
                 <img src={ParentKid} alt="parent-enfant roulant ensemble" />
             </div>

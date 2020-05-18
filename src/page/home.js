@@ -16,19 +16,21 @@ import Clothing from '../image/clothing.png';
 import Van from '../image/van.png';
 import BikeMain from '../image/bicycleRedHome.png';
 
+
 const Home = () => {
 
 
 
     return(
         <div>
+           
         <Slide top>
-          <h1>Home</h1>
+          <h1><Trans i18nKey='home.homeBike' /></h1>
         </Slide>  
         <Fade left>
         <img id="bikeMain" src={BikeMain} alt="main red bike" />
         </Fade>
-        
+
           <div className="center">
                  <img className="img-Home" id="img-landscape" src={Landscape} alt="paysage" />
                  <img className="img-Home" src={Electricity} alt="electricité" />
@@ -108,7 +110,7 @@ const Home = () => {
                 </div>
                 </div>
 
-
+                <hr />
                 <div className="boxContainerReverse">
                 <div>
                 <Fade right> 
@@ -128,7 +130,7 @@ const Home = () => {
                  </div>
                  </div>
 
-
+                <hr />
                  <div className="boxContainer">
                 <div>
                 <Fade left>

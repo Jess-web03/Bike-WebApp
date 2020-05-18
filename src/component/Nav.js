@@ -13,16 +13,18 @@ import Cranium from '../image/cranium2.png';
 import Screw from '../image/outil.png';
 import Phone from '../image/letters2.png';
 
+
 const Nav = () =>{
     const paths = {
         default:'*',
         home: '/',
-        information: 'information',
+        quiz: 'quiz',
         mecano: 'mecano',
         contact: 'contact',
       };
     return(
         <div>
+            
             <Navbar>
             
                 <ul>
@@ -30,7 +32,7 @@ const Nav = () =>{
                         <Link to={paths.home}><img className="logoNav" src={HomeNav} alt="logo home" /></Link>
                     </li>
                     <li>  
-                        <Link to={paths.information}><img className="logoNav" src={Cranium} alt="logo cranium" /></Link>
+                        <Link to={paths.quiz}><img className="logoNav" src={Cranium} alt="logo cranium" /></Link>
                     </li>
                     <li>  
                         <Link to={paths.mecano}><img className="logoNav" src={Screw} alt="logo screw" /></Link>
@@ -40,10 +42,11 @@ const Nav = () =>{
                     </li>
                     </ul>
                     </Navbar>
+                   
     <Router>
    
         <Home path={paths.home} exact />
-        <Information path={paths.information} exact  />
+        <Information path={paths.quiz} exact  />
         <Mecano path={paths.mecano}/>
         <Contact path={paths.contact} exact  />
         <NotFound default />

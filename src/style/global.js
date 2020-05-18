@@ -27,6 +27,37 @@ export const GlobalStyles = createGlobalStyle`
     p.questionQuiz{
       font-size:32px;
     }
+    img.arrowPink{
+      width:50px;
+      height:auto;
+    }
+    .white{
+      color:white;
+    }
+    .modal{
+      background-color: rgba(0,0,0,0.5);
+      position:relative;
+      margin: 0 auto;
+      width:300px;
+    }
+    .btn-rounded-small{
+      background-color: #DB7093;
+      border: none;
+      border-radius:50px;
+      color: white;
+      padding: 10px 22px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight:bold;
+      margin: 4px 2px;
+      cursor: pointer;
+      outline:none;
+    }
+    .btn-rounded-small:hover{
+      background-color: rgb(248, 153, 185);
+    }
     .btn-rounded{
       background-color: #DB7093;
       border: none;
@@ -103,6 +134,17 @@ export const GlobalStyles = createGlobalStyle`
       h3{
         font-size:70px;
       }
+      img.arrowPink{
+        width:70px;
+        height:auto;
+      }
+      .modal{
+        background-color: rgba(0,0,0,0.5);
+        position:relative;
+        margin: 0 auto;
+        width:400px;
+      }
+   
       .logoNav{
         width:60px;
         height: auto;
@@ -173,6 +215,15 @@ export const GlobalStyles = createGlobalStyle`
     }
     form{
       width:300px;
+    }
+    hr{
+      display:none;
+    }
+    .modal{
+      background-color: rgba(0,0,0,0.5);
+      position:relative;
+      margin: 0 auto;
+      width:500px;
     }
     #more{
       font-size:50px;
@@ -297,6 +348,12 @@ export const GlobalStyles = createGlobalStyle`
     img{
       width:500px;
       height:auto;
+    }
+    .modal{
+      background-color: rgba(0,0,0,0.5);
+      position:relative;
+      margin: 0 auto;
+      width:700px;
     }
     #bicycleGirl{
       width:400px;

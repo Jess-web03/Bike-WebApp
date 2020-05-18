@@ -16,7 +16,6 @@ const Contact = (props) => {
         setUserVisible(true);
         setFormVisible(false);
          let name = data.name;
-         console.log(name);
         };
      
     return(
@@ -25,24 +24,24 @@ const Contact = (props) => {
             <h2>Contact</h2>
             </Slide>
 
-    <div class="box">
+    <div className="box">
         <div>
       {userVisible ? <p><Trans i18nKey='merci' /></p> : null}
       {formVisible ?
         <form onSubmit={handleSubmit(onSubmit)} >
-        <label for="name">
+        <label htmlFor="name">
         FirstName
         <br />
         <input ref={register} type="text" id="name" name="name" value={props.name} required />
         </label>
         <br />
-        <label for="email">
+        <label htmlFor="email">
         Email
         <br />
         <input ref={register} type="text" id="email" name="email" value={props.email} required />
         </label>
         <br />
-        <label for="message">
+        <label htmlFor="message">
         Message
         <br />
         <textarea ref={register} id="message" name="message" value={props.message} />
