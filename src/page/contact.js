@@ -15,7 +15,7 @@ const Contact = (props) => {
     const onSubmit = data => {
         setUserVisible(true);
         setFormVisible(false);
-         let name = data.name;
+         const name = data.name;
         };
      
     return(
